@@ -13,13 +13,13 @@ docker run -d --name nginx-official -p 8080:80 nginx
 curl http://localhost:8080
 ```
 
-![Pull nginx:latest](Screenshots/Exp3/L3-P1-a.png)
+![Pull nginx:latest](Screenshots/Exp3a/L3-P1-a.png)
 
-![Run nginx-official container](Screenshots/Exp3/L3-p1-b.png)
+![Run nginx-official container](Screenshots/Exp3a/L3-p1-b.png)
 
-![Curl localhost:8080](Screenshots/Exp3/L3-p1-c.png)
+![Curl localhost:8080](Screenshots/Exp3a/L3-p1-c.png)
 
-![Nginx Welcome Page in Browser](Screenshots/Exp3/L3-P1-d.png)
+![Nginx Welcome Page in Browser](Screenshots/Exp3a/L3-P1-d.png)
 
 ---
 
