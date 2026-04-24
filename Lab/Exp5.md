@@ -25,7 +25,7 @@ docker volume ls
 docker inspect web1 | grep -A 5 Mounts
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(849).png)
+![ ](Screenshots/Exp5/Screenshot%20(849).png)
 
 ---
 
@@ -41,7 +41,7 @@ docker volume inspect mydata
 docker run -d -v ~/myapp-data:/app/data --name web3 nginx
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(850).png)
+![ ](Screenshots/Exp5/Screenshot%20(850).png)
 
 #### **2. Bind Mounts (Host Directory)**
 
@@ -60,7 +60,7 @@ docker run -d \
   -v mysql-data:/var/lib/mysql \
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(851).png)
+![ ](Screenshots/Exp5/Screenshot%20(851).png)
 
 ---
 
@@ -92,7 +92,7 @@ docker run -d \
   nginx
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(852).png)
+![ ](Screenshots/Exp5/Screenshot%20(852).png)
 
 #### **Example 2: Web App with Configuration Files**
 
@@ -115,7 +115,7 @@ docker run -d \
 # Error: container name "/app1" already in use
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(853).png)
+![ ](Screenshots/Exp5/Screenshot%20(853).png)
 
 ---
 
@@ -137,7 +137,7 @@ docker ps
 # Shows: app11, nginx-custom, new-mysql, web3, web2, web1, node-container
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(854).png)
+![ ](Screenshots/Exp5/Screenshot%20(854).png)
 
 ```bash
 docker exec -it app11 bash
@@ -168,7 +168,7 @@ docker exec -it app22 bash
 echo $DATABASE_HOST
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(855).png)
+![ ](Screenshots/Exp5/Screenshot%20(855).png)
 
 ```bash
 # localhost
@@ -188,7 +188,7 @@ docker build -t flask-env-app .
 # [+] Building 7.4s (10/10) FINISHED
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(856).png)
+![ ](Screenshots/Exp5/Screenshot%20(856).png)
 
 ---
 
@@ -217,7 +217,7 @@ docker run -d \
 # Container started successfully
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(857).png)
+![ ](Screenshots/Exp5/Screenshot%20(857).png)
 
 ### **Lab 3: Test Environment Variables**
 
@@ -231,7 +231,7 @@ docker run -d \
 # }
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(858).png)
+![ ](Screenshots/Exp5/Screenshot%20(858).png)
 
 ---
 
@@ -252,7 +252,7 @@ docker stats
 # 1af8072d2f3c  dreamy_roentgen  0.03%  31.67MiB / 7.61GiB  0.41%  4.13kB / 126B    20.6MB / 127kB   1
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(859).png)
+![ ](Screenshots/Exp5/Screenshot%20(859).png)
 
 ```bash
 # docker stats --no-stream (all values show --)
@@ -262,7 +262,7 @@ docker stats --format json --no-stream
 docker stats --no-stream --no-trunc
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(860).png)
+![ ](Screenshots/Exp5/Screenshot%20(860).png)
 
 ---
 
@@ -280,7 +280,7 @@ docker top monitor-test
 docker top monitor-test -ef
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(861).png)
+![ ](Screenshots/Exp5/Screenshot%20(861).png)
 
 ```bash
 # docker top monitor-test -ef continued
@@ -306,7 +306,7 @@ docker logs monitor-test
 # worker processes starting (30-45)
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(863).png)
+![ ](Screenshots/Exp5/Screenshot%20(863).png)
 
 ```bash
 # docker logs continued:
@@ -318,7 +318,7 @@ docker logs monitor-test
 docker logs --tail 100 monitor-test
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(864).png)
+![ ](Screenshots/Exp5/Screenshot%20(864).png)
 
 ```bash
 docker logs -t monitor-test
@@ -329,7 +329,7 @@ docker logs -t monitor-test
 # (all worker processes with full timestamps)
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(865).png)
+![ ](Screenshots/Exp5/Screenshot%20(865).png)
 
 ```bash
 docker logs --since 5m monitor-test
@@ -339,14 +339,14 @@ docker logs -f --tail 50 -t monitor-test
 # Combined: follow + last 50 lines + timestamps
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(866).png)
+![ ](Screenshots/Exp5/Screenshot%20(866).png)
 
 ```bash
 # docker logs -f --tail 50 -t continued
 # timestamped startup logs and HTTP access logs showing
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(867).png)
+![ ](Screenshots/Exp5/Screenshot%20(867).png)
 
 ---
 
@@ -368,7 +368,7 @@ docker inspect monitor-test
 # "Driver": "overlayfs"
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(868).png)
+![ ](Screenshots/Exp5/Screenshot%20(868).png)
 
 ```bash
 docker inspect --format='{{.Config.Env}}' monitor-test
@@ -386,7 +386,7 @@ docker events --filter 'type=container'
 # Shows docker stats table with all running containers
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(869).png)
+![ ](Screenshots/Exp5/Screenshot%20(869).png)
 
 ---
 
@@ -427,7 +427,7 @@ docker events --filter 'type=container'
 # Build Cache     95      0   51.3MB    51.3MB
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(870).png)
+![ ](Screenshots/Exp5/Screenshot%20(870).png)
 
 ---
 
@@ -445,7 +445,7 @@ docker events --filter 'type=container'
 # 82d8f44ec481  flask-app  0.00%  13.04MiB/7.61GiB
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(871).png)
+![ ](Screenshots/Exp5/Screenshot%20(871).png)
 
 ---
 
@@ -462,7 +462,7 @@ docker run -d --name web1 --network my-network nginx
 docker network create my-network
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(872).png)
+![ ](Screenshots/Exp5/Screenshot%20(872).png)
 
 ```bash
 # curl output - web1 responding with nginx default page HTML
@@ -471,7 +471,7 @@ curl http://localhost
 # curl: (7) Failed to connect to localhost port 80 after 1 ms: Connection refused
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(873).png)
+![ ](Screenshots/Exp5/Screenshot%20(873).png)
 
 ---
 
@@ -488,7 +488,7 @@ docker exec isolated-app ifconfig
 #      inet6 addr: ::1/128 Scope:Host
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(874).png)
+![ ](Screenshots/Exp5/Screenshot%20(874).png)
 
 ```bash
 # ifconfig continued:
@@ -504,7 +504,7 @@ docker network prune
 # Deleted Networks: my_overlay, my_ipvlan, 26compose_wordpress-network, mybridge
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(875).png)
+![ ](Screenshots/Exp5/Screenshot%20(875).png)
 
 ---
 
@@ -522,7 +522,7 @@ docker run -d \
 # Status: Downloaded newer image for postgres:15
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(876).png)
+![ ](Screenshots/Exp5/Screenshot%20(876).png)
 
 ```bash
 docker run -d \
@@ -541,7 +541,7 @@ docker network inspect bridge
 # "IPAM": { "Config": [{ "Subnet": "172.17.0.0/16" }] }
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(877).png)
+![ ](Screenshots/Exp5/Screenshot%20(877).png)
 
 ```bash
 # bridge inspect continued:
@@ -551,7 +551,7 @@ docker rm $(docker ps -aq)
 # All container IDs listed and removed
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(878).png)
+![ ](Screenshots/Exp5/Screenshot%20(878).png)
 
 ---
 
@@ -579,7 +579,7 @@ docker network ls
 # myapp-network bridge         local
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(879).png)
+![ ](Screenshots/Exp5/Screenshot%20(879).png)
 
 ---
 
@@ -606,7 +606,7 @@ docker build -t flask-app:latest .
 # [+] Building 61.0s (7/7) FINISHED
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(880).png)
+![ ](Screenshots/Exp5/Screenshot%20(880).png)
 
 ### **Monitoring All Services**
 
@@ -624,7 +624,7 @@ docker ps
 # e39d19b62d69  nginx             Up 8 minutes      0.0.0.0:80->8080/tcp
 ```
 
-![ ](../Screenshots/Exp5/Screenshot%20(881).png)
+![ ](Screenshots/Exp5/Screenshot%20(881).png)
 
 ---
 
