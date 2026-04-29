@@ -40,6 +40,12 @@
 ### Experiment 10 :
 [Open Experiment 10](Lab/Exp10.md)
 
+### Experiment 11 :
+[Open Experiment 11](Lab/Exp11.md)
+
+### Experiment 12 :
+[Open Experiment 12](Lab/Exp12.md)
+
 
 ## PROJECT ASSIGNMENT 1 
 [Open Assignment 1 ](Assignment1/README.md)
